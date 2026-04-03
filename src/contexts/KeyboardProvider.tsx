@@ -64,8 +64,8 @@ export const KeyboardProvider = ({
 		fieldsRef.current[id].value = value;
 
 		if (fieldsRef.current[id].ref) {
-			fieldsRef.current[id].ref!.value = value;
-			fieldsRef.current[id].ref?.focus();
+			fieldsRef.current[id].ref.value = value;
+			fieldsRef.current[id].ref.focus();
 		}
 	};
 

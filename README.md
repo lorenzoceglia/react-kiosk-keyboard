@@ -1,5 +1,7 @@
 # React Kiosk Keyboard
 
+[**Live Demo**](https://kiosk-keyboard-demo.vercel.app/)
+
 A React virtual keyboard component for touch screen applications. Built with TypeScript, Tailwind CSS, and React Context. Designed for kiosk and embedded systems applications.
 
 ## Installation

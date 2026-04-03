@@ -168,7 +168,12 @@ export const Keyboard = ({
 			{isVisible && (
 				<>
 					<div style={{ height: keyboardRef.current?.offsetHeight || 0 }} />
-					<div className="fixed inset-0 z-40" onClick={closeKeyboard} />
+					<button
+						type="button"
+						onClick={closeKeyboard}
+						className="fixed inset-0 z-40"
+						style={{ backgroundColor: "transparent", border: "none" }}
+					/>
 				</>
 			)}
 
@@ -187,12 +192,12 @@ export const Keyboard = ({
 							: isEmojiActive && keyboardRowsEmoji
 								? keyboardRowsEmoji
 								: keyboardRows
-						).map((row: string[], rowIndex: number) => {
+						).map((row: string[]) => {
 							const spaceIndex = row.indexOf("SPACE");
 							if (spaceIndex !== -1) {
 								return (
 									<div
-										key={rowIndex}
+										key={`row-${row.join("-")}`}
 										className="flex items-center justify-center"
 										style={{
 											gap: `${gap}px`,
@@ -218,7 +223,7 @@ export const Keyboard = ({
 
 							return (
 								<div
-									key={rowIndex}
+									key={`row-${row.join("-")}`}
 									className="flex items-center justify-center"
 									style={{
 										gap: `${gap}px`,

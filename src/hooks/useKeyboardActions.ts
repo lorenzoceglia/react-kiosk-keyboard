@@ -19,7 +19,7 @@ export const useKeyboardActions = ({ keyboard }: UseKeyboardActionsProps) => {
 				ENTER: () => getOnSubmit?.(activeInputId)?.(),
 				SHIFT: () => setIsShiftActive((prev) => !prev),
 				CAPS: () => setIsCapsActive((prev) => !prev),
-				SPACE: () => setValue(activeInputId, current + " "),
+				SPACE: () => setValue(activeInputId, `${current} `),
 				CLEAR: () => {
 					setValue(activeInputId, "");
 					setIsShiftActive(false);
