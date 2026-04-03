@@ -1,4 +1,4 @@
-import { IconProps } from "../../types";
+import type { IconProps } from "../../types";
 
 export const ThrashCan = ({ color, height, width }: IconProps) => {
 	return (

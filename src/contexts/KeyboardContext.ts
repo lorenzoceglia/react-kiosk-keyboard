@@ -1,6 +1,6 @@
 import { createContext } from "react";
-import { KeyboardContextType } from "../types";
+import type { KeyboardContextType } from "../types";
 
 export const KeyboardContext = createContext<KeyboardContextType | undefined>(
-  undefined,
+	undefined,
 );
