@@ -492,6 +492,12 @@ export default function App() {
 - React 16.8.0 or higher
 - React DOM 16.8.0 or higher
 
+## Requirements
+
+- React 16.8.0 or higher
+- React DOM 16.8.0 or higher
+- Tailwind CSS 3.0 or higher
+
 ## Browser Support
 
 - Chrome/Edge (latest)
