@@ -7,11 +7,11 @@ A React virtual keyboard component for touch screen applications. Built with Typ
 ## Installation
 
 ```bash
-npm install @lorenzoceglia/react-kiosk-keyboard
+npm install @lorenzo.ceglia/react-kiosk-keyboard
 # or
-pnpm add @lorenzoceglia/react-kiosk-keyboard
+pnpm add @lorenzo.ceglia/react-kiosk-keyboard
 # or
-yarn add @lorenzoceglia/react-kiosk-keyboard
+yarn add @lorenzo.ceglia/react-kiosk-keyboard
 ```
 
 ## Quick Start
@@ -22,7 +22,7 @@ import {
   KeyboardProvider,
   Keyboard,
   useKeyboard,
-} from "@lorenzoceglia/react-kiosk-keyboard";
+} from "@lorenzo.ceglia/react-kiosk-keyboard";
 
 function MyForm() {
   const { register } = useKeyboard();
@@ -89,7 +89,7 @@ The main virtual keyboard component. Renders hidden by default and appears when 
 Context provider that manages all keyboard state and functionality. Must wrap your entire application.
 
 ```tsx
-import { KeyboardProvider } from "@lorenzoceglia/react-kiosk-keyboard";
+import { KeyboardProvider } from "@lorenzo.ceglia/react-kiosk-keyboard";
 
 export default function App() {
   return (
@@ -191,7 +191,7 @@ Import TypeScript types for full type safety:
 import type {
   KeyboardTheme,
   KeyboardLayout,
-} from "@lorenzoceglia/react-kiosk-keyboard";
+} from "@lorenzo.ceglia/react-kiosk-keyboard";
 ```
 
 **Available Types:**
@@ -210,7 +210,7 @@ You can use **pre-built themes** or **create custom themes**.
 Import and use themes already included in the library:
 
 ```tsx
-import { Keyboard, PRESET_THEMES } from "@lorenzoceglia/react-kiosk-keyboard";
+import { Keyboard, PRESET_THEMES } from "@lorenzo.ceglia/react-kiosk-keyboard";
 
 // Access pre-built themes
 const darkTheme = PRESET_THEMES.find((t) => t.id === "midnight");
@@ -246,7 +246,7 @@ export default function App() {
 Create your own theme object by following the `KeyboardTheme` type:
 
 ```tsx
-import type { KeyboardTheme } from "@lorenzoceglia/react-kiosk-keyboard";
+import type { KeyboardTheme } from "@lorenzo.ceglia/react-kiosk-keyboard";
 
 const customTheme: KeyboardTheme = {
   id: "custom",
@@ -269,7 +269,7 @@ You can organize your themes in a separate file:
 
 ```tsx
 // themes.ts
-import type { KeyboardTheme } from "@lorenzoceglia/react-kiosk-keyboard";
+import type { KeyboardTheme } from "@lorenzo.ceglia/react-kiosk-keyboard";
 
 export const myDarkTheme: KeyboardTheme = {
   id: "my-dark",
@@ -317,7 +317,7 @@ You can use **pre-built keyboard layouts** or **create your own custom layouts**
 The library comes with multiple keyboard layouts already built and exported. Import them directly:
 
 ```tsx
-import { Keyboard, KEYBOARD_LAYOUTS } from "@lorenzoceglia/react-kiosk-keyboard";
+import { Keyboard, KEYBOARD_LAYOUTS } from "@lorenzo.ceglia/react-kiosk-keyboard";
 
 // KEYBOARD_LAYOUTS contains all pre-built layouts
 <Keyboard layout="qwerty" />
@@ -357,7 +357,7 @@ You can create custom keyboard layouts by defining your own layout structure:
 import {
   Keyboard,
   KEYBOARD_LAYOUTS,
-} from "@lorenzoceglia/react-kiosk-keyboard";
+} from "@lorenzo.ceglia/react-kiosk-keyboard";
 
 // Define your custom layout configuration
 const customLayout = [
@@ -384,14 +384,14 @@ Or extend the keyboard component to support custom layout registration.
 CSS is automatically included when you import the Keyboard component:
 
 ```tsx
-import { Keyboard } from "@lorenzoceglia/react-kiosk-keyboard";
+import { Keyboard } from "@lorenzo.ceglia/react-kiosk-keyboard";
 // Styles are automatically applied ✓
 ```
 
 Or manually import if needed:
 
 ```tsx
-import "@lorenzoceglia/react-kiosk-keyboard/style.css";
+import "@lorenzo.ceglia/react-kiosk-keyboard/style.css";
 ```
 
 ## Complete Example
@@ -402,8 +402,8 @@ import {
   KeyboardProvider,
   Keyboard,
   useKeyboard,
-} from "@lorenzoceglia/react-kiosk-keyboard";
-import type { KeyboardTheme } from "@lorenzoceglia/react-kiosk-keyboard";
+} from "@lorenzo.ceglia/react-kiosk-keyboard";
+import type { KeyboardTheme } from "@lorenzo.ceglia/react-kiosk-keyboard";
 
 const customTheme: KeyboardTheme = {
   id: "dark",

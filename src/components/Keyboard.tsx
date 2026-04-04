@@ -168,12 +168,8 @@ export const Keyboard = ({
 			{isVisible && (
 				<>
 					<div style={{ height: keyboardRef.current?.offsetHeight || 0 }} />
-					<button
-						type="button"
-						onClick={closeKeyboard}
-						className="fixed inset-0 z-40"
-						style={{ backgroundColor: "transparent", border: "none" }}
-					/>
+					{/* biome-ignore lint/a11y/noStaticElementInteractions lint/a11y/useKeyWithClickEvents: overlay close button */}
+					<div className="fixed inset-0 z-40" onClick={closeKeyboard} />
 				</>
 			)}
 
