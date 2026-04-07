@@ -381,18 +381,14 @@ Or extend the keyboard component to support custom layout registration.
 
 ### Styles
 
-CSS is automatically included when you import the Keyboard component:
+To use the keyboard styles, import the CSS file:
 
 ```tsx
+import "@lorenzo.ceglia/react-kiosk-keyboard/index.css";
 import { Keyboard } from "@lorenzo.ceglia/react-kiosk-keyboard";
-// Styles are automatically applied ✓
 ```
 
-Or manually import if needed:
-
-```tsx
-import "@lorenzo.ceglia/react-kiosk-keyboard/style.css";
-```
+Make sure to import the CSS file before using the Keyboard component to see the styles properly applied.
 
 ## Complete Example
 
@@ -514,3 +510,41 @@ MIT © [Lorenzo Ceglia](https://github.com/lorenzoceglia)
 ## Repository
 
 [GitHub: react-kiosk-keyboard](https://github.com/lorenzoceglia/react-kiosk-keyboard)
+
+## Local Testing
+
+To test the library locally in another project without downloading from npm, you can use the included `create-package-zip.sh` script to generate a local package tarball.
+
+### Using the Package Script
+
+Run the script from the project root:
+
+```bash
+./scripts/create-package-zip.sh
+```
+
+This will:
+
+1. Build the library
+2. Create a tarball package in the `releases/` folder
+3. Display installation instructions
+
+### Installing Locally
+
+After running the script, install the generated tarball in your test project:
+
+```bash
+npm install /path/to/react-kiosk-keyboard/releases/react-kiosk-keyboard-x.x.x.tgz
+```
+
+Or add it to your `package.json`:
+
+```json
+{
+  "dependencies": {
+    "@lorenzo.ceglia/react-kiosk-keyboard": "file:/path/to/react-kiosk-keyboard/releases/react-kiosk-keyboard-x.x.x.tgz"
+  }
+}
+```
+
+This was useful for testing the library locally before publishing to npm.

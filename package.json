@@ -6,7 +6,7 @@
 	"license": "MIT",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/lorenzoceglia/react-kiosk-keyboard"
+		"url": "https://github.com/lorenzo.ceglia/react-kiosk-keyboard"
 	},
 	"homepage": "https://github.com/lorenzoceglia/react-kiosk-keyboard#readme",
 	"bugs": {
@@ -31,7 +31,7 @@
 			"require": "./dist/index.cjs.js",
 			"types": "./dist/index.d.ts"
 		},
-		"./style": "./dist/index.css"
+		"./index.css": "./dist/index.css"
 	},
 	"files": [
 		"dist"
@@ -55,12 +55,13 @@
 		"@rollup/plugin-terser": "^0.4.0",
 		"@rollup/plugin-typescript": "^11.0.0",
 		"@types/react": "^19.2.14",
+		"@tailwindcss/postcss": "^4.0.0",
+		"rollup-plugin-postcss": "^4.0.2",
+		"postcss": "^8.4.47",
 		"husky": "^9.1.7",
-		"postcss": "^8.4.0",
 		"rollup": "^4.0.0",
 		"rollup-plugin-peer-deps-external": "^2.2.4",
-		"rollup-plugin-postcss": "^4.0.2",
-		"tailwindcss": "^3.0.0",
+		"tailwindcss": "^4.0.0",
 		"tslib": "^2.6.0",
 		"typescript": "^5.0.0"
 	},
@@ -69,5 +70,8 @@
 	},
 	"publishConfig": {
 		"access": "public"
+	},
+	"dependencies": {
+		"@rollup/plugin-commonjs": "^29.0.2"
 	}
 }
